@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_output/features/app_core/com/module/service/impl/IHomeService.dart';
-import 'package:flutter_output/features/app_core/com/module/service/impl/IMessageService.dart';
-import 'package:flutter_output/features/app_core/com/module/service/IService.dart';
-import 'package:flutter_output/features/app_core/com/module/service/impl/IMineService.dart';
+// import 'package:flutter_output/features/app_core/com/module/service/i_home_service.dart';
+// import 'package:flutter_output/features/app_core/com/module/service/impl/i_home_service.dart';
+// import 'package:flutter_output/features/app_core/com/module/service/impl/i_message_service.dart';
+// import 'package:flutter_output/features/app_core/com/module/service/i_service.dart';
+// import 'package:flutter_output/features/app_core/com/module/service/impl/i_mine_service.dart';
+
+import 'features/app_core/com/module/service/i_home_service.dart';
+import 'features/app_core/com/module/service/service_manager.dart';
 
 
 void main() {
 
-  IService service = IHomeService();
-  print("IService ${service.getName()}");
+  // IService service = IHomeService();
+  // print("IService ${service.getName()}");
+  //
+  // service = IMessageService();
+  // print("IService ${service.getName()}");
+  //
+  // service = ITrendsService();
+  // print("IService ${service.getName()}");
 
-  service = IMessageService();
+  IHomeService service = ServiceManager.instance.get<IHomeService>(IHomeService.sName);
   print("IService ${service.getName()}");
-
-  service = ITrendsService();
-  print("IService ${service.getName()}");
+  service.goHome();
 
   runApp(const MyApp());
 }
