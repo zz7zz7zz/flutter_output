@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_output/features/app_core/com/module/service/impl/IHomeService.dart';
 import 'package:flutter_output/features/app_core/com/module/service/impl/IMessageService.dart';
 import 'package:flutter_output/features/app_core/com/module/service/IService.dart';
+import 'package:flutter_output/features/app_core/com/module/service/impl/IMineService.dart';
 
 
 void main() {
@@ -12,6 +13,8 @@ void main() {
   service = IMessageService();
   print("IService ${service.getName()}");
 
+  service = ITrendsService();
+  print("IService ${service.getName()}");
 
   runApp(const MyApp());
 }
