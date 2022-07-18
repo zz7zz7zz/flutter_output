@@ -1,4 +1,4 @@
-import 'package:flutter_output/features/app_core/com/module/service/i_home_service.dart';
+import 'package:flutter_output/features_core/com/module/service/i_home_service.dart';
 
 class IHomeServiceImpl implements IHomeService{
   @override

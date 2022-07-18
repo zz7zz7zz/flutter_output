@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_output/features/app_core/com/module/service/i_home_service.dart';
-// import 'package:flutter_output/features/app_core/com/module/service/impl/i_home_service.dart';
-// import 'package:flutter_output/features/app_core/com/module/service/impl/i_message_service.dart';
-// import 'package:flutter_output/features/app_core/com/module/service/i_service.dart';
-// import 'package:flutter_output/features/app_core/com/module/service/impl/i_mine_service.dart';
 
-import 'features/app_core/com/module/service/i_home_service.dart';
-import 'features/app_core/com/module/service/service_manager.dart';
+import 'package:flutter_output/features_core/com/module/service/i_home_service.dart';
+import 'package:flutter_output/features_core/com/module/service/service_manager.dart';
 
 
 void main() {
