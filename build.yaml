@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      flutter_output|resource_metadata_other:
+        enabled: true
+
+builders:
+  resource_metadata_other:
+    import: "package:flutter_output/features_core/com/module/service/annotation/builder.dart"
+    builder_factories: ["serviceBuilder"]
+    build_extensions: {".dart": [".g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
