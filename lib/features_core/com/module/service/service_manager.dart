@@ -10,11 +10,13 @@ import 'i_service.dart';
 
 // part 'service_manager.g.dart';//SharedPartBuilder时才使用
 
-@ServiceArrayAnnotation([
-  ServiceInfo(IHomeService.sName,"package:flutter_output/features/app_home/i_home_service_impl.dart","IHomeServiceImpl"),
-  ServiceInfo(ITrendsService.sName,"package:flutter_output/features/app_home/i_trends_service_impl.dart","ITrendsServiceImpl"),
-  ServiceInfo(IMessageService.sName,"package:flutter_output/features/app_home/i_message_service_impl.dart","IMessageServiceImpl"),
-  ServiceInfo(IMineService.sName,"package:flutter_output/features/app_home/i_mine_service_impl.dart","IMineServiceImpl")])
+@ServiceArrayAnnotation("'package:flutter_output/features_core/com/module/service/i_service.dart'",
+    [
+      ServiceInfo(IHomeService.sName,"package:flutter_output/features/app_home/i_home_service_impl.dart","IHomeServiceImpl"),
+      ServiceInfo(ITrendsService.sName,"package:flutter_output/features/app_trends/i_trends_service_impl.dart","ITrendsServiceImpl"),
+      ServiceInfo(IMessageService.sName,"package:flutter_output/features/app_message/i_message_service_impl.dart","IMessageServiceImpl"),
+      ServiceInfo(IMineService.sName,"package:flutter_output/features/app_mine/i_mine_service_impl.dart","IMineServiceImpl")
+    ])
 class ServiceManager {
 
     // 私有化构造方法

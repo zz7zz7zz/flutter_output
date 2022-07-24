@@ -1,9 +1,10 @@
 class ServiceArrayAnnotation{
 
+  final String baseServicePkg;
+
   final List<ServiceInfo> bindServiceArray;
 
-  const ServiceArrayAnnotation(this.bindServiceArray);
-
+  const ServiceArrayAnnotation(this.baseServicePkg, this.bindServiceArray);
 }
 
 class ServiceInfo{
@@ -13,4 +14,9 @@ class ServiceInfo{
   final String implClass;
 
   const ServiceInfo(this.sName, this.pkg, this.implClass);
+
+  @override
+  String toString() {
+    return 'ServiceInfo{sName: $sName, pkg: $pkg, implClass: $implClass}';
+  }
 }
