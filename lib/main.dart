@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'features_core/com/module/service/i_trends_service.dart';
 import 'package:flutter_output/features_core/com/module/service/i_home_service.dart';
 import 'package:flutter_output/features_core/com/module/service/service_manager.dart';
 
@@ -18,6 +19,12 @@ void main() {
   IHomeService service = ServiceManager.instance.get<IHomeService>(IHomeService.sName);
   print("IService ${service.getName()}");
   service.goHome();
+
+  ITrendsService trendsService = ServiceManager.instance.get<ITrendsService>(ITrendsService.sName);
+  print("IService ${trendsService.getName()}");
+  trendsService.getTrends();
+
+
 
   runApp(const MyApp());
 }

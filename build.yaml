@@ -10,6 +10,6 @@ builders:
     builder_factories: ["serviceBuilder"]
     build_extensions: {".dart": [".g.part"]}
     auto_apply: root_package
-#    build_to: source
-    build_to: cache
+    build_to: source
+#    build_to: cache
 #    applies_builders: ["source_gen|combining_builder"]

@@ -1,5 +1,4 @@
 
-import 'package:flutter_output/features/app_home/i_home_service_impl.dart';
 import 'package:flutter_output/features_core/com/module/service/annotation/service_array_annotation.dart';
 
 import 'i_home_service.dart';
@@ -7,6 +6,7 @@ import 'i_trends_service.dart';
 import 'i_message_service.dart';
 import 'i_mine_service.dart';
 import 'i_service.dart';
+import 'service_manager.g.dart';
 
 // part 'service_manager.g.dart';//SharedPartBuilder时才使用
 
@@ -29,11 +29,7 @@ class ServiceManager {
     Map<String,IService> sMap = {};
 
     T get<T extends IService>(String sName){
-      sMap[sName] = IHomeServiceImpl();
-      return sMap[sName] as T;
+      return ServiceManagerImpl.get(sName);
     }
 
-    void register(){
-
-    }
 }

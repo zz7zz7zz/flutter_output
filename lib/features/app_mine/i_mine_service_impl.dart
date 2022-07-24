@@ -4,7 +4,7 @@ class IMineServiceImpl implements IMineService{
 
   @override
   String getName() {
-    return "I am IHomeServiceImpl";
+    return "I am IMineServiceImpl";
   }
 
   @override

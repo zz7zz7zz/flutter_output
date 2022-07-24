@@ -4,7 +4,7 @@ class IMessageServiceImpl implements IMessageService{
 
   @override
   String getName() {
-    return "I am IHomeServiceImpl";
+    return "I am IMessageServiceImpl";
   }
 
   @override
