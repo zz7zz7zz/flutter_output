@@ -9,6 +9,7 @@ builders:
     import: "package:flutter_output/features_core/com/module/service/annotation/builder.dart"
     builder_factories: ["serviceBuilder"]
     build_extensions: {".dart": [".g.part"]}
-    auto_apply: dependents
+    auto_apply: root_package
+#    build_to: source
     build_to: cache
-    applies_builders: ["source_gen|combining_builder"]
+#    applies_builders: ["source_gen|combining_builder"]
