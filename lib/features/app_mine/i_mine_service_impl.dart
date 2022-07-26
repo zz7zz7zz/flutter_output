@@ -9,7 +9,7 @@ class IMineServiceImpl implements IMineService{
 
   @override
   void goMine() {
-    print("goMessage !");
+    print("go mine !");
   }
 
 }
