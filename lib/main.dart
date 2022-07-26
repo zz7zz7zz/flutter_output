@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'features_core/com/module/service/i_trends_service.dart';
 import 'package:flutter_output/features_core/com/module/service/i_home_service.dart';
 import 'package:flutter_output/features_core/com/module/service/service_manager.dart';
+import 'package:flutter_output/features_core/com/module/service/i_message_service.dart';
+import 'package:flutter_output/features_core/com/module/service/i_mine_service.dart';
 
 
 void main() {
@@ -24,7 +26,14 @@ void main() {
   print("IService ${trendsService.getName()}");
   trendsService.getTrends();
 
+  IMessageService messageService = ServiceManager.instance.get<IMessageService>(IMessageService.sName);
+  print("IService ${messageService.getName()}");
+  messageService.goMessage();
 
+
+  IMineService mineService = ServiceManager.instance.get<IMineService>(IMineService.sName);
+  print("IService ${mineService.getName()}");
+  mineService.goMine();
 
   runApp(const MyApp());
 }
