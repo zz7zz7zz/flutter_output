@@ -44,22 +44,26 @@ class ServiceArrayAnnotationGenerator
 
     sb.write("\n\nclass ServiceManagerImpl {");
 
-    sb.write('\n\n     static bool isComponentInitialized = false;');
-    sb.write('\n\n     static Map<String,IService> sMap = {};');
+    sb.write('\n\n     static bool _isComponentInitialized = false;');
+    sb.write('\n\n     static final Map<String,IService> _serviceImplMap = {};');
 
-    sb.write('\n\n     static void init(){');
+    sb.write('\n\n     static void _init(){');
     for (int i = 0; i < list.length; i++) {
       sb.write(
-          '\n        sMap[\'${list[i].sName}\'] = ${list[i].implClass}();');
+          '\n        _serviceImplMap[\'${list[i].sName}\'] = ${list[i].implClass}();');
     }
-    sb.write('\n        isComponentInitialized = true;');
+    sb.write('\n        _isComponentInitialized = true;');
     sb.write('\n     }');
 
-    sb.write('\n\n     static T get<T extends IService>(String sName){');
-    sb.write('\n         if(!isComponentInitialized){');
-    sb.write('\n              init();');
+    sb.write('\n\n     static T? get<T extends IService>(String sName){');
+    sb.write('\n         if(!_isComponentInitialized){');
+    sb.write('\n              _init();');
     sb.write('\n         }');
-    sb.write('\n         return sMap[sName] as T;');
+    sb.write('\n         IService? service = _serviceImplMap[sName];');
+    sb.write('\n         if(null != service) {');
+    sb.write('\n            return service as T;');
+    sb.write('\n         }');
+    sb.write('\n         return null;');
     sb.write('\n    }');
 
     sb.write('\n}');

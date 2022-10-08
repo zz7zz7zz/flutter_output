@@ -38,12 +38,18 @@ class ServiceManager {
 
   static ServiceManager get instance => _instance;
 
-  Map<String, IService> sMap = {};
+  final Map<String, IService> _serviceMap = {};
 
   T get<T extends IService>(String sName) {
-    IService? t = ServiceManagerImpl.get(sName);
-    t ??= _getDefault(sName);
-    return t as T;
+    IService? service = _serviceMap[sName];
+    if(null == service){
+      service = ServiceManagerImpl.get(sName);
+      service ??= _getDefault(sName);
+      if(null != service){
+        _serviceMap[sName] = service;
+      }
+    }
+    return service as T;
   }
 
   T _getDefault<T extends IService>(String sName) {
