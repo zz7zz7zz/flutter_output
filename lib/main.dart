@@ -5,7 +5,7 @@ import 'package:flutter_output/features_core/com/module/service/i_home_service.d
 import 'package:flutter_output/features_core/com/module/service/service_manager.dart';
 import 'package:flutter_output/features_core/com/module/service/i_message_service.dart';
 import 'package:flutter_output/features_core/com/module/service/i_mine_service.dart';
-
+import 'package:flutter_output/features_core/com/module/service/i_task_service.dart';
 
 void main() {
 
@@ -34,6 +34,10 @@ void main() {
   IMineService mineService = ServiceManager.instance.get<IMineService>(IMineService.sName);
   print("IService ${mineService.getName()}");
   mineService.goMine();
+
+  ITaskService taskService = ServiceManager.instance.get<ITaskService>(ITaskService.sName);
+  print("IService ${taskService.getName()}");
+  taskService.getTask();
 
   runApp(const MyApp());
 }

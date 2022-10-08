@@ -1,5 +1,4 @@
-class ServiceArrayAnnotation{
-
+class ServiceArrayAnnotation {
   final String baseServicePkg;
 
   final List<ServiceInfo> bindServiceArray;
@@ -7,8 +6,7 @@ class ServiceArrayAnnotation{
   const ServiceArrayAnnotation(this.baseServicePkg, this.bindServiceArray);
 }
 
-class ServiceInfo{
-
+class ServiceInfo {
   final String sName;
   final String pkg;
   final String implClass;
