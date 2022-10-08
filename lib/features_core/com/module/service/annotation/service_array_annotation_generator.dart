@@ -59,7 +59,7 @@ class ServiceArrayAnnotationGenerator
     sb.write('\n         if(!_isComponentInitialized){');
     sb.write('\n              _init();');
     sb.write('\n         }');
-    sb.write('\n         IService? service = _serviceImplMap[sName];');
+    sb.write('\n         IService? service = _serviceImplMapy[sName];');
     sb.write('\n         if(null != service) {');
     sb.write('\n            return service as T;');
     sb.write('\n         }');
