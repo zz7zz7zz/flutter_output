@@ -1,11 +1,12 @@
 @echo off
 echo.
 echo ################# build start #################
-set rootDir=%cd%
+
 
 set envMode=%1
 set channel=%2
 set product=%3
+set rootDir=%cd%
 
 echo envMode = %envMode%
 echo channel = %channel%
