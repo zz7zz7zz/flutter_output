@@ -1,6 +1,3 @@
-
-abstract class IService{
-
-    String getName();
-
+abstract class IService {
+  String getName();
 }
