@@ -8,8 +8,9 @@ feautres:
       - app_task
    moyu:
       - app_home
-
-
+      - app_trends
+      - app_message
+      - app_mine
 feautresTab:
    default:
       - !com.plugin.flutter.config.feautres.Module
