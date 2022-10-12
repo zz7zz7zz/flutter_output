@@ -18,7 +18,7 @@ call build_pre.bat
 echo.
 echo ----- 2. build task -----
 cd %rootDir%
-flutter build apk -t lib/main.dart
+
 
 cd %cd%\shell\windows
 call build_post.bat

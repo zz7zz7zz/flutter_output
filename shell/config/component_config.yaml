@@ -1,0 +1,50 @@
+!com.plugin.flutter.config.AppConfig
+feautres:
+   default:
+      - app_home
+      - app_trends
+      - app_message
+      - app_mine
+      - app_task
+   moyu:
+      - app_home
+
+
+feautresTab:
+   default:
+      - !com.plugin.flutter.config.feautres.Module
+         name: app_home
+         extras: ""
+      - !com.plugin.flutter.config.feautres.Module
+         name: app_trends
+         extras: ""
+      - !com.plugin.flutter.config.feautres.Module
+         name: app_message
+         extras: ""
+      - !com.plugin.flutter.config.feautres.Module
+         name: app_mine
+         extras: ""
+   moyu:
+      - !com.plugin.flutter.config.feautres.Module
+         name: app_home
+         extras: ""
+      - !com.plugin.flutter.config.feautres.Module
+         name: app_trends
+         extras: ""
+      - !com.plugin.flutter.config.feautres.Module
+         name: app_message
+         extras: ""
+login:
+   default:
+      - facebook
+      - google
+   moyu:
+      - txoauth
+      - wechat
+      - qq
+pay:
+   default:
+      - wechat
+      - sandpay
+   moyu:
+      - google
