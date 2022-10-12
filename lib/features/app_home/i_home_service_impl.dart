@@ -12,4 +12,9 @@ class IHomeServiceImpl implements IHomeService{
       print("go home now !");
   }
 
+  @override
+  String goBeautyGirlJpg() {
+    return "lib/features/app_home/res/images/a.jpg";
+  }
+
 }

@@ -4,6 +4,8 @@ abstract class IHomeService extends IService {
   static const String sName = "IHomeService";
 
   void goHome();
+
+  String goBeautyGirlJpg();
 }
 
 class DefaultHomeServiceImpl implements IHomeService {
@@ -16,4 +18,11 @@ class DefaultHomeServiceImpl implements IHomeService {
   void goHome() {
     print("Default:DefaultHomeServiceImpl:go home now");
   }
+
+  @override
+  String goBeautyGirlJpg() {
+    return "Default:DefaultHomeServiceImpl:goBeautyGirlJpg";
+  }
+
+
 }

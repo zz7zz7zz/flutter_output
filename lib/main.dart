@@ -140,6 +140,8 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+          Image.asset(ServiceManager.instance.get<IHomeService>(IHomeService.sName).goBeautyGirlJpg(),
+              width: 200.0, height: 200.0)
           ],
         ),
       ),
