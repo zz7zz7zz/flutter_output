@@ -3,14 +3,15 @@ echo.
 echo ################# build start #################
 
 
-set envMode=%1
-set channel=%2
-set product=%3
+set envMode=%2
+set channel=%3
+set product=%4
 set rootDir=%cd%
 
 echo envMode = %envMode%
 echo channel = %channel%
 echo product = %product%
+echo rootDir = %rootDir%
 
 cd %cd%\shell\windows
 call build_pre.bat
