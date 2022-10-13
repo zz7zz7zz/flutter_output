@@ -3,6 +3,10 @@ targets:
     builders:
       flutter_output|resource_metadata_other:
         enabled: true
+    sources:
+      exclude:
+        - lib/features/app_home/i_home_service_impl.dart #build:app_home ----> not work
+        - lib/features/app_home/** #build:app_home ----> not work
 
 builders:
   resource_metadata_other:
